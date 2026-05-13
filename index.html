@@ -57,18 +57,60 @@
         </ul>
     </nav>
 
-    <section id="home" style="background-color: var(--bg-pastel-blue);">
-        <div class="container text-center">
-            <h1 class="gmarket-font text-[60px] font-bold mb-6 text-white drop-shadow-sm">
-                KDIA-TIPS COIN PROJECT:<br>22디지털 자산의 새로운 기준 </h1>
-            <p class="text-lg text-white opacity-90 mb-10 max-w-2xl mx-auto">
-                안정적인 실물 생태계와 혁신적인 디지털 기술의 조화. KDIA가 제안하는 가치의 새로운 정의.
-            </p>
-            <a href="KDIACOIN_Whitepaper_eng.pdf" download="KDIACOIN_Whitepaper_eng.pdf" class="btn-premium inline-block text-center">
-    Whitepaper Download
-</a>
+    <section id="home" class="relative min-h-screen w-full overflow-hidden bg-[#050a14] flex items-center justify-center pt-20">
+    
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] opacity-50">
+            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" class="w-full h-full blur-[80px]">
+                <path d="M0,500 C200,300 400,700 600,500 C800,300 1000,700 1000,500 L1000,1000 L0,1000 Z" fill="url(#wave-gradient)"></path>
+                <defs>
+                    <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4a00e0; stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#8e2de2; stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
         </div>
-    </section>
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+
+    <div class="container relative z-10 flex flex-col items-center text-center px-6">
+        
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[13px] font-medium text-blue-300 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span> Real-time Value
+            </div>
+            <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[13px] font-medium text-purple-300 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved"></i> Secure Ecosystem
+            </div>
+            <div class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-[13px] font-medium text-cyan-300 flex items-center gap-2">
+                <i class="fa-solid fa-gem"></i> Asset Backed
+            </div>
+        </div>
+
+        <h1 class="gmarket-font text-[50px] md:text-[72px] font-bold leading-[1.1] mb-6 tracking-tight text-white">
+            Smarter Asset,<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stronger KDIA</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed">
+            KDIA-TIPS COIN PROJECT: 디지털 자산의 새로운 기준.<br class="hidden md:block">
+            실물 생태계와 연동된 안정적인 가치로 혁신적인 금융의 미래를 선도합니다.
+        </p>
+
+        <a href="KDIACOIN_Whitepaper_eng.pdf" download="KDIACOIN_Whitepaper_eng.pdf" 
+           class="group relative flex items-center gap-3 px-10 py-5 rounded-full bg-white/10 border border-white/20 backdrop-blur-xl 
+                  text-white font-semibold text-lg transition-all hover:bg-white/20 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(139,92,246,0.3)]">
+            <span>Whitepaper Download</span>
+            <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-transform group-hover:translate-x-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </div>
+        </a>
+
+    </div>
+</section>
 
     <section id="kdia-coin">
         <div class="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

@@ -46,16 +46,59 @@
 </head>
 <body>
 
-    <nav class="fixed top-0 w-full z-50 py-8 px-12 flex justify-between items-center">
-        <div class="text-xl font-bold gmarket-font tracking-tight">KDIA COIN</div> <ul class="flex space-x-10 text-[15px] font-medium opacity-80">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#kdia-coin">KDIA Coin</a></li>
-            <li><a href="#key">Key</a></li>
-            <li><a href="#service">Service</a></li>
-            <li><a href="#token-info">Token Info</a></li>
-            <li><a href="#foundation">Foundation</a></li>
-        </ul>
-    </nav>
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 px-12 flex justify-between items-center transition-all duration-300">
+    <div id="nav-logo" class="text-xl font-bold gmarket-font tracking-tight transition-colors duration-300">
+        KDIA COIN
+    </div> 
+    
+    <ul id="nav-menu" class="flex space-x-10 text-[15px] font-medium transition-colors duration-300">
+        <li><a href="#home" class="hover:opacity-60">Home</a></li>
+        <li><a href="#kdia-coin" class="hover:opacity-60">KDIA Coin</a></li>
+        <li><a href="#key" class="hover:opacity-60">Key</a></li>
+        <li><a href="#service" class="hover:opacity-60">Service</a></li>
+        <li><a href="#token-info" class="hover:opacity-60">Token Info</a></li>
+        <li><a href="#foundation" class="hover:opacity-60">Foundation</a></li>
+    </ul>
+</nav>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    const navLogo = document.getElementById('nav-logo');
+    const navMenu = document.getElementById('nav-menu');
+
+    window.addEventListener('scroll', () => {
+        // 스크롤이 50px 이상 내려갔을 때 (배경이 흰색으로 변하는 시점 가정)
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-white', 'shadow-md', 'py-4'); // 배경 흰색 전환 및 높이 축소
+            navbar.classList.remove('py-6');
+            
+            navLogo.classList.replace('text-[#FFFFF0]', 'text-[#2D3436]'); // 아이보리 -> 다크 그레이(검정 계열)
+            navMenu.classList.replace('text-[#FFFFF0]', 'text-[#2D3436]');
+        } else {
+            navbar.classList.remove('bg-white', 'shadow-md', 'py-4');
+            navbar.classList.add('py-6');
+            
+            // 초기 상태 (어두운 배경 위) - 아이보리 색상 적용
+            navLogo.classList.add('text-[#FFFFF0]'); 
+            navMenu.classList.add('text-[#FFFFF0]');
+            navLogo.classList.remove('text-[#2D3436]');
+            navMenu.classList.remove('text-[#2D3436]');
+        }
+    });
+
+    // 초기 실행 시 색상 설정
+    if (window.scrollY <= 50) {
+        navLogo.classList.add('text-[#FFFFF0]');
+        navMenu.classList.add('text-[#FFFFF0]');
+    }
+</script>
+
+<style>
+    /* 아이보리 색상 정의: #FFFFF0 (Ivory) */
+    .text-ivory { color: #FFFFF0; }
+    /* 다크 그레이 (완전한 검정보다 세련된 느낌) */
+    .text-dark { color: #2D3436; }
+</style>
 
     <section id="home" class="relative min-h-screen w-full overflow-hidden bg-[#050a14] flex items-center justify-center pt-20">
     
